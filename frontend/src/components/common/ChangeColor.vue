@@ -1,6 +1,6 @@
 <template>
   <div id="color-box">
-    <span style="display: flex;justify-content: center;">컬럼 색상 지정</span>
+<!--    <span style="display: flex;justify-content: center;">색상 지정</span>-->
     <ul>
       <li v-for="item in list" :key="item" :style="`background:${item.color}`" @click="setColor(item.color)"></li>
     </ul>
