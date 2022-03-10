@@ -1,0 +1,166 @@
+.optlist_data {
+  position: absolute; left: 0px; top: 34px; z-index: 20; border: 1px solid #000; border-radius: 0 0 2px 2px; background-color: #fff;
+  .list_data {
+    width: 302px; height: auto;
+    li {
+      width: 130px; padding: 6px 0 8px; float: left; width: 50%; height: 100%; box-sizing: border-box;
+      &:first-child {
+        width: 120px; border-left: 0 none; margin-left: 0;
+        .tit_data { border-top: none; }
+      }
+      &:nth-child(odd) { border-right: 1px solid #ccc; }
+      &:nth-child(2) { .tit_data { border-top: none; } }
+    }
+    .tit_data { display: block; overflow: hidden; height: 32px; padding: 0 15px; line-height: 29px; color: #777; font-size: 13px;font-weight: 400;text-align: left;white-space: nowrap;text-overflow: ellipsis;text-decoration: none; }
+    .link_help {
+      margin: -2px 0 0 2px;
+      &:hover {
+        .tooltip { &::after { position: fixed;display: block;white-space: normal;z-index: 999;padding: 8px 13px 11px;border-radius: 4px;font-size: 12px;max-width: 350px;background-color: #fff;color: #555;box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);text-align: left;content: attr(data-text);} }
+      }
+    }
+    .tooltip { content: ''; }
+    .link_g {
+      display: inline-block;width: 20px;height: 20px;text-decoration: none;text-align: center;vertical-align: middle;
+      .ico_help { width: 12px;height: 12px;background-position: -865px -30px;opacity: 0.25; }
+      .ico_comm { width: 14px;height: 14px;margin: 4px auto 2px; }
+    }
+    .link_option {
+      display: block;overflow: hidden;height: 32px;padding: 0 15px;line-height: 29px;color: #555;text-align: left;white-space: nowrap;text-overflow: ellipsis;text-decoration: none;letter-spacing: -1px;cursor: pointer;
+      &:hover {
+        background-color: rgba(0, 0, 0, .03);
+        .ico_row { background-position: -705px 0; }
+      }
+      &.on { color: #326EDC;background: #F2F6FD; }
+      &.in_active { opacity: 0.4;cursor: default;pointer-events: none; }
+      .ico_row { display: inline-block;text-decoration: none;text-align: center;vertical-align: middle;width: 8px;height: 8px;margin-right: 5px;background-position: -669px 0;opacity: 0.25; }
+    }
+  }
+}
+.opt-select-left { display: flex;justify-content: space-between;width: 250px; }
+.opt-select { width: 120px;position: relative;font-weight: 400;font-size: 13px;color: #999;background: #fff;vertical-align: top; }
+.dimension { text-align: left;padding-left: 100px !important; }
+.metrics-group { left: -212px !important; }
+.flip-list-move { transition: transform 0.5s; }
+.no-move { transition: transform 0s; }
+.ghost { opacity: 0.5;background: #F2F6FD; }
+.list-group .link_option { cursor: move !important; }
+.btn-save { width: 100%;height: 40px;background: #326edc;color: #fff; }
+.adboardbox_wrap {
+  min-width: 1110px;
+  .adboardbox_search {
+    position: relative;height: 60px;margin-top: 15px;padding: 11px 381px 0 18px;border: 1px solid #ddd;background: #fff;box-sizing: border-box;
+    .wrap_price {
+      position: relative;z-index: 10;float: left;margin-right: 40px;padding-top: 9px;
+      .tit_search { float: left;font-size: 13px;font-weight: 400;color: #999;line-height: 20px; }
+      .txt_search { float: left;padding-left: 6px;font-size: 13px;font-weight: 700;color: #111;line-height: 20px; }
+      .link_account { float: left;padding-left: 20px;font-size: 13px;font-weight: 400;color: #999;line-height: 20px;text-decoration: none; }
+    }
+    .wrap_calendar { position: absolute;top: 11px;right: 19px; }
+  }
+  .addashboard_box { margin-top: 15px; }
+  .tab_dashboard {
+    height: 49px;
+    li {
+      float: left;position: relative;width: 33.6%;max-width: 490px;height: 49px;margin: 0;
+      &:first-child { width: 32.8%;max-width: 480px; }
+      .link_tab {
+        display: block;height: 50px;padding: 0 18px;border: 1px solid #ddd;font-weight: 700;font-size: 16px;line-height: 46px;text-decoration: none;color: #777;background: #f5f5f5;
+        .ico_comm { display: inline-block;vertical-align: top; }
+        .ico_campaign { width: 18px;height: 14px;margin: 18px 10px 0 0;background-position: -715px -360px; }
+        .ico_adgroup { width: 19px;height: 19px;margin: 16px 7px 0 0;background-position: -715px -380px; }
+        .ico_material { width: 17px;height: 20px;margin: 14px 7px 0 0;background-position: -715px -405px; }
+      }
+      &.on {
+        .link_tab {
+          position: relative;z-index: 1;border-bottom-color: #fff;font-weight: 700;color: #111;background-color: #fff;
+          .ico_campaign { background-position: -690px -360px; }
+          .ico_adgroup { background-position: -690px -380px; }
+          .tab_dashboard .on .ico_material { background-position: -690px -405px; }
+        }
+      }
+    }
+    li+li { .link_tab { margin-left: 10px; } }
+  }
+  .set_table {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-bottom: none;
+    .set_head {
+      height: 50px;padding: 7px 19px;
+      .f_right {
+        float: right;
+        .single_wrap { float: left; margin-left: 10px;
+        }
+      }
+    }
+    .table_wrap {
+      position: relative;border-top: 1px solid #ddd;border-bottom: 0 none;
+      .table_dashboard {
+        position: relative;
+        .table {
+          border-spacing: 0px;overflow: scroll;
+          &.sticky {
+            .header { top: 0px;position: sticky;z-index: 1;width: fit-content; }
+            .body { position: relative;z-index: 0; }
+          }
+          .tr {
+            .th {
+              display: table-cell !important;border-right: 1px solid #eee;vertical-align: middle;box-sizing:border-box;left: 0px;
+              .inner_tbl { font-weight: 700; }
+              &.cell_fixed { border-right-color: #ccc;box-sizing: inherit !important;width: 400px;position:sticky;z-index:3;left:0px; }
+            }
+            .td {
+              border-top: none;display: table-cell !important;border-right: 1px solid #eee;background: #fff;vertical-align: middle;box-sizing: border-box;position: sticky; left: 0px;
+              &.cell_fixed { border-right-color: #ccc;box-sizing: inherit !important;box-sizing: border-box; width: 400px; position: sticky; z-index: 3; left: 0px; }
+            }
+            .resizer {
+              display: inline-block;width: 18px;height: 100%;position: absolute;right: 0px;top: 0px;transform: translateX(50%);z-index: 1;touch-action: none;cursor: col-resize;
+              .btn_move { display: block;width: 18px;height: 55px;text-align: center;cursor: ew-resize; }
+            }
+            &:first-child {
+              .th { cursor: pointer;border-top: none;background: #f5f5f5; }
+              .td { border-top: none; }
+            }
+            .inner_tbl { position: relative;padding: 13px 10px 14px;font-size: 13px;font-weight: normal;color: #555; }
+            .sortable { display: table-cell;height: 50px;vertical-align: middle;width: inherit; }
+          }
+        }
+        &.scroll_left {
+          .th {
+            &.cell_fixed {
+              background: #fff;
+              &:after { position: absolute;top: 0;bottom: 0;right: -7px;z-index: 10;width: 6px;height: 100%;background: linear-gradient(to right,rgba(0, 0, 0, .1),rgba(0, 0, 0, 0));content: ''; }
+            }
+          }
+          .td {
+            &.cell_fixed {
+              background: #fff;
+              &:after { position: absolute;top: 0;bottom: 0;right: -7px;z-index: 10;width: 6px;height: 100%;background: linear-gradient(to right,rgba(0, 0, 0, .1),rgba(0, 0, 0, 0));content: ''; }
+            }
+          }
+        }
+        &.scroll_top {
+          .header {
+            position: relative;background: #fff;
+            &:after { position:absolute;left:0;right:0;bottom:-6px;z-index:10;height:6px;width:100%;background:linear-gradient(to bottom,rgba(0, 0, 0, .1),rgba(0, 0, 0, 0));content:'' }
+            .tr {
+              &:first-child { .th { &.cell_fixed { z-index:20 !important } } }
+              &:nth-child(2) { .inner_tbl{ color:#333; font-weight:normal } }
+            }
+          }
+        }
+      }
+    }
+  }
+  .btn_gm {
+    display: inline-block;width: 34px;height: 34px;vertical-align: top;border: 1px solid #8d8f92;border-radius: 2px;font-weight: 700;text-align: center;
+    .inner_g {
+      line-height: 17px;
+      &.icon_g {
+        overflow: hidden;min-width: 34px;height: 34px;padding: 0;
+        .ico_download { width: 10px;height: 13px;margin:8px auto;margin-top: 10px;background-position: -715px -315px;
+        }
+      }
+    }
+  }
+}

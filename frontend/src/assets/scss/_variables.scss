@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+//Vars
+$assetPath : '~@/assets/img/';
+
+/* G : global */
+$G-fw-light : 300;
+$G-fw-regular : 400;
+$G-fw-medium : 500;
+$G-fw-bold : 700;
+
+$G-color1 : #71C9CE;
+$G-color2 : #A6E3E9;
+$G-color3 : #CBF1F5;
+$G-color4 : #E3FDFD;
+$G-color5 : #F29F8D;
+$G-color6 : #838383;
+$G-color7 : #8d8f92; 
+$G-color8 : #424242;
+$G-color9 : #333333;
+$G-color10 : #808a94;
+$G-color11 : #aaa;
+$G-color12 : #666;
+$G-color13 : #F2F6FD;
+
+$G-white : #fff;
+$G-white2 : #F6F6F6;
+$G-white3 : #eee;
+$G-white4 : #ccc;
+$G-white5 : #f1f2f5;
+
+$G-success : #00ca0a;
+ 
+$G-kakao : #ffce09;
+$G-naver : #36ac37;
+$G-facebook : #3a5ca9;
+
+$G-line-color1 : #E6E6E6;
+$G-line-color2 : #b9b9b9;
+$G-line-color3 : #424242;
+
+$G-box-shadow : 0px 3px 13px rgba(0,0,0,0.11);
+$G-box-shadow2 : 0px 3px 13px rgba(0,0,0,0.2);
+$G-box-shadow3 : 0px 3px 5px rgba(0,0,0,0.2);
+$G-box-shadow4 : 0px 3px 5px rgba(204,205,208,0.1);
+
+
+
+
+@function safe-rgb($color) {
+    @return unquote("rgb(#{red($color)}, #{green($color)}, #{blue($color)})");
+}
